@@ -11,7 +11,7 @@ public class ListElement {
 	
 	
 	public ListElement next;
-	//private ListEl
+	//public ListElement previous;
 	private int data;
 	
 	
@@ -19,6 +19,7 @@ public class ListElement {
 	{
 		this.next = null;
 		this.data = 0;
+		//this.previous = null;
 		
 	}
 	
@@ -32,5 +33,13 @@ public class ListElement {
 	public int getData()
 	{
 		return this.data;
+	}
+	
+	public void setNext(ListElement next){
+		this.next = next;
+	}
+
+	public ListElement getNext(){
+		return this.next;
 	}
 }
