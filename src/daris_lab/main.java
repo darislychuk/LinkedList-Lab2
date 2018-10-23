@@ -18,19 +18,21 @@ public class main {
 		ListElement le2 = new ListElement();
 		ListElement le3 = new ListElement();
 		ListElement le4 = new ListElement();
+		ListElement le5 = new ListElement();
 		
 		
-		le.setData(1); //set values to list elements
-		le2.setData(2);
+		le.setData(5); //set values to list elements
+		le2.setData(4);
 		le3.setData(3);
-		le4.setData(4);
-
+		le4.setData(2);
+		le5.setData(1);
 		
 		System.out.print("Values from getData() (no LL): ");//Print elements from ListElement Class
 		System.out.print(le.getData() + " ");
 		System.out.print(le2.getData() + " ");
 		System.out.print(le3.getData() + " ");
 		System.out.print(le4.getData() + " ");
+		System.out.print(le5.getData() + " ");
 		System.out.print("\n\n");
 
 		
@@ -42,9 +44,23 @@ public class main {
 		list.addElement(le2);
 		list.addElement(le3);
 		list.addElement(le4);
+		list.addElement(le5);
 		
 	
 		list.printLinkedListHead();//Print all elements in the list
+		
+		
+		ListElement temp = new ListElement();//Retrieve a specific element 
+
+		System.out.print("Retrieve element 0\n");
+		temp = list.getElement(0);
+		System.out.print("Element 0 data = " + temp.getData() + "\n\n");
+
+		System.out.print("Retrieve element 3\n");
+		temp = list.getElement(2);
+		System.out.print("Element 2 data = " + temp.getData() + "\n\n");
+		
+		
 		System.out.print("\n");
 
 		

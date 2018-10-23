@@ -27,6 +27,23 @@ public class LinkedList {
 		}
 	}
 	
+	public ListElement getElement(int index){
+		ListElement temp = head;
+		int count = 0;
+
+		if(temp == null){
+			System.out.print("There are no elements available\n");
+			return(temp);
+		}
+
+		while(count < index && temp != null){
+			temp = temp.getNext();
+			count++;
+		}
+
+		return(temp);
+	}
+	
 	public void printLinkedListHead(){
 		ListElement temp = head;
 
@@ -41,5 +58,6 @@ public class LinkedList {
 			}while(temp != null);
 
 		}
+		System.out.print("\n");
 	}
 }
