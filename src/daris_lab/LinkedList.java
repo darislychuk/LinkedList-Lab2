@@ -71,7 +71,7 @@ public class LinkedList {
 			return(prev);
 		}
 	}
-	public void printLinkedListHead(){
+	public void printLinkedListHead(){//print function
 		ListElement temp = head;
 
 		if(temp == null){
@@ -87,4 +87,14 @@ public class LinkedList {
 		}
 		System.out.print("\n");
 	}
+	public void printLinkedListTail(ListElement le){//print starting with the tail function
+		  if(le==null){
+			   return;
+			  }
+			  printLinkedListTail(le.getNext());
+			  System.out.print(le.getData() + " " );
+			 }
+		
+	
+
 }

@@ -29,6 +29,7 @@ public class main {
 		le4.setData(2);
 		le5.setData(1);
 		
+		
 		System.out.print("Values from getData() (no LL): ");//Print elements from ListElement Class
 		System.out.print(le.getData() + " ");
 		System.out.print(le2.getData() + " ");
@@ -41,7 +42,7 @@ public class main {
 		LinkedList list = new LinkedList();//Create Linked list
 
 		
-		System.out.print("Adding an elements...\n");//Add elements to List
+		System.out.print("Adding elements...\n");//Add elements to List
 		list.addElement(le);
 		list.addElement(le2);
 		list.addElement(le3);
@@ -50,16 +51,17 @@ public class main {
 		
 	
 		list.printLinkedListHead();//Print all elements in the list
-		
+		list.printLinkedListTail(le);//Print all elements in the list starting with the tail
+		System.out.print("\n");
 		
 		ListElement temp = new ListElement();//Retrieve a specific element 
 
 		System.out.print("Retrieve element 0\n");
-		temp = list.getElement(0);
+		temp = list.getElement(0);//item to retrieve
 		System.out.print("Element 0 data = " + temp.getData() + "\n\n");
 
 		System.out.print("Retrieve element 2\n");
-		temp = list.getElement(2);
+		temp = list.getElement(2);//item to retrieve
 		System.out.print("Element 2 data = " + temp.getData() + "\n\n");
 		
 		
@@ -68,13 +70,17 @@ public class main {
 		System.out.print("Delete element with data 3: \n");
 		list.deleteElement(3);
 		list.printLinkedListHead();
-
+		list.printLinkedListTail(le);
+		
 		System.out.print("\n");
-
 		
 		System.out.print("Delete head: \n");//Delete head
 		list.deleteElement(5);
 		list.printLinkedListHead();
+		
+		System.out.print("Delete tail: \n");//Delete head
+		list.deleteElement(1);
+		list.printLinkedListTail(le);
 		
 		System.out.print("\n");
 
