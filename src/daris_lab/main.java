@@ -7,12 +7,14 @@ package daris_lab;
  * @author Daris Lychuk
  *
  */
+
 public class main {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
 		
 		ListElement le = new ListElement(); //create elements for linked list
 		ListElement le2 = new ListElement();
@@ -56,10 +58,23 @@ public class main {
 		temp = list.getElement(0);
 		System.out.print("Element 0 data = " + temp.getData() + "\n\n");
 
-		System.out.print("Retrieve element 3\n");
+		System.out.print("Retrieve element 2\n");
 		temp = list.getElement(2);
 		System.out.print("Element 2 data = " + temp.getData() + "\n\n");
 		
+		
+		System.out.print("Deleting elements: \n");//Delete elements from the list
+		
+		System.out.print("Delete element with data 3: \n");
+		list.deleteElement(3);
+		list.printLinkedListHead();
+
+		System.out.print("\n");
+
+		
+		System.out.print("Delete head: \n");//Delete head
+		list.deleteElement(5);
+		list.printLinkedListHead();
 		
 		System.out.print("\n");
 
